@@ -24,7 +24,7 @@ function drawCanvas() {
     c.fill();
     c.beginPath();
     c.moveTo(posNow[0], posNow[1]);
-    c.lineTo(posNow[0]+tileLeng*Math.sin(Math.rad(360-lastDeg))*unitLeng, posNow[1]-tileLeng*Math.cos(Math.rad(360-lastDeg))*unitLeng);
+    c.lineTo(posNow[0]+tileLeng*Math.sin(Math.rad((lastDeg+180)%360))*unitLeng, posNow[1]-tileLeng*Math.cos(Math.rad((lastDeg+180)%360))*unitLeng);
     c.lineWidth = unitLeng*2;
     c.stroke();
     c.beginPath();
